@@ -268,15 +268,23 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="reveal order-2 md:order-1 relative">
-                     <!-- Abstract Tech Image representation -->
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-                        <img src="./img/team.jpg" alt="Team Meeting" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <p class="font-bold text-xl">VinFast Đô Lương</p>
-                            <p class="text-sm opacity-90">Nơi tài năng tỏa sáng</p>
-                        </div>
-                    </div>
+                    <!-- Abstract Tech Image representation -->
+<div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+    
+    <img 
+        src="./img/team.jpg" 
+        alt="Team Meeting" 
+        class="w-full h-auto md:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
+    >
+
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+
+    <div class="absolute bottom-6 left-6 text-white">
+        <p class="font-bold text-xl">VinFast Đô Lương</p>
+        <p class="text-sm opacity-90">Nơi tài năng tỏa sáng</p>
+    </div>
+
+</div>
                     <!-- Floating Card -->
                     <div class="absolute -right-6 -bottom-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 animate-bounce hidden md:block">
                         <div class="flex items-center gap-3">
@@ -447,7 +455,7 @@
     </section>
 
     <!-- Apply Form (Conversion Center) -->
-    <section id="apply" class="py-24 relative overflow-hidden">
+    <section id="apply" class="py-12 md:py-24 relative overflow-hidden">
         <!-- Background Decor -->
         <div class="absolute inset-0 bg-white"></div>
         <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent opacity-50"></div>
@@ -519,34 +527,34 @@
 </div>
 
 
-                <div class="p-8 md:p-12">
-                    <form id="applicationForm" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 md:p-12">
+                    <form id="applicationForm" class="space-y-4 md:space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             <div class="group">
-                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Họ và tên <span class="text-red-500">*</span></label>
-                                <input type="text" required="" placeholder="Nguyễn Văn A" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent p-3 outline-none transition-all">
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Họ và tên <span class="text-red-500">*</span></label>
+                                <input type="text" required="" placeholder="Nguyễn Văn A" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all">
                             </div>
                             <div class="group">
-                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Số điện thoại <span class="text-red-500">*</span></label>
-                                <input type="tel" required="" pattern="[0-9]{10}" placeholder="09xxxxxxxx" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent p-3 outline-none transition-all">
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Số điện thoại <span class="text-red-500">*</span></label>
+                                <input type="tel" required="" pattern="[0-9]{10}" placeholder="09xxxxxxxx" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all">
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             <div class="group">
-                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Năm sinh</label>
-                                <input type="number" placeholder="2000" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent p-3 outline-none transition-all">
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Năm sinh</label>
+                                <input type="number" placeholder="2000" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all">
                             </div>
                             <div class="group">
-                                <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Địa chỉ</label>
-                                <input type="text" placeholder="Đô Lương, Nghệ An..." class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent p-3 outline-none transition-all">
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Địa chỉ</label>
+                                <input type="text" placeholder="Đô Lương, Nghệ An..." class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all">
                             </div>
                         </div>
 
                         <div class="group">
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Vị trí ứng tuyển <span class="text-red-500">*</span></label>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Vị trí ứng tuyển <span class="text-red-500">*</span></label>
                             <div class="relative">
-                                <select class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent p-3 outline-none transition-all appearance-none cursor-pointer">
+                                <select class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all appearance-none cursor-pointer">
                                     <option value="" disabled="" selected="">Chọn vị trí...</option>
                                     <option value="sales">Tư vấn bán hàng (Thu nhập cao - HOT)</option>
                                     <option value="marketing">Marketing</option>
@@ -556,11 +564,11 @@
                         </div>
 
                         <div class="group">
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-2">Kinh nghiệm (nếu có)</label>
-                            <textarea rows="2" placeholder="Mô tả ngắn gọn kinh nghiệm của bạn..." class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent p-3 outline-none transition-all"></textarea>
+                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Kinh nghiệm (nếu có)</label>
+                            <textarea rows="2" placeholder="Mô tả ngắn gọn kinh nghiệm của bạn..." class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all"></textarea>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-lg px-5 py-4 text-center transition-all duration-300 shadow-xl shadow-brand-500/30 hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                        <button type="submit" id="submitBtn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-lg px-4 py-3 md:px-5 md:py-4 text-center transition-all duration-300 shadow-xl shadow-brand-500/30 hover:-translate-y-1 flex items-center justify-center gap-2 group">
                             <span id="submitText">NỘP HỒ SƠ NGAY</span>
                             <iconify-icon icon="solar:plain-bold" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></iconify-icon>
                         </button>
