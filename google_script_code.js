@@ -10,7 +10,7 @@ function doPost(e) {
     console.log('Parsed data:', data);
     
     // Open Google Sheet
-    const sheetId = '1ANVyf1XCYsoyvs24DCHYsx-UN8_HqAp-VhDJbXp-eSQ';
+    const sheetId = 'AKfycbybxtHTf1C4pkqvw0V1CLnH4Hobpf12nixT9I6OY5fTzI-XxrsZjqjzlyPjKjdtYELN';
     const sheetName = 'Thông Tin Ứng Viên';
     
     console.log('Opening sheet:', sheetId, sheetName);
@@ -26,7 +26,7 @@ function doPost(e) {
     
     // If sheet is empty, create header row
     if (sheet.getLastRow() === 0) {
-      const headers = ['Thời gian nộp', 'Họ tên', 'Số điện thoại', 'Năm sinh', 'Địa chỉ', 'Vị trí ứng tuyển', 'Kinh nghiệm'];
+      const headers = ['Thời gian nộp', 'Họ tên', 'Số điện thoại', 'Năm sinh', 'Địa chỉ', 'Vị trí ứng tuyển', 'Trình độ học vấn', 'Kinh nghiệm'];
       sheet.appendRow(headers);
       console.log('Header row created');
     }
@@ -39,6 +39,7 @@ function doPost(e) {
       data.birthYear || '',
       data.address || '',
       data.position || '',
+      data.education || '',
       data.experience || ''
     ];
     

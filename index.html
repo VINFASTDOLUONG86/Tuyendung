@@ -2,6 +2,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuyển Dụng VinFast Đô Lương - Mãi Mãi Tinh Thần Khởi Nghiệp</title>
+    <!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tuyển Dụng VinFast Đô Lương 2026 - Thu Nhập Không Giới Hạn">
+<meta property="og:description" content="Gia nhập đội ngũ VinFast Đô Lương. Lương cứng + hoa hồng không giới hạn. Được đào tạo từ con số 0. Ứng tuyển ngay!">
+<meta property="og:image" content="https://hunganh.website/img/thumb.jpg">
+<meta property="og:url" content="https://hunganh.website/tuyendung.html">
+<meta property="og:site_name" content="VinFast Đô Lương">
+
+<!-- Zalo / Messenger / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tuyển Dụng VinFast Đô Lương 2026">
+<meta name="twitter:description" content="Cơ hội thu nhập đột phá tại VinFast Đô Lương.">
+<meta name="twitter:image" content="https://hunganh.website/img/thumb.jpg">
     <link rel="icon" type="image/png" href="img/Vinfast.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -551,15 +564,31 @@
                             </div>
                         </div>
 
-                        <div class="group">
-                            <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Vị trí ứng tuyển <span class="text-red-500">*</span></label>
-                            <div class="relative">
-                                <select class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all appearance-none cursor-pointer">
-                                    <option value="" disabled="" selected="">Chọn vị trí...</option>
-                                    <option value="sales">Tư vấn bán hàng (Thu nhập cao - HOT)</option>
-                                    <option value="marketing">Marketing</option>
-                                </select>
-                                <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-4 text-slate-400 pointer-events-none"></iconify-icon>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            <div class="group">
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Vị trí ứng tuyển <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <select class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all appearance-none cursor-pointer">
+                                        <option value="" disabled="" selected="">Chọn vị trí...</option>
+                                        <option value="sales">Tư vấn bán hàng (Thu nhập cao - HOT)</option>
+                                        <option value="marketing">Marketing</option>
+                                    </select>
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-4 text-slate-400 pointer-events-none"></iconify-icon>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <label class="block text-xs font-bold uppercase text-slate-500 mb-1 md:mb-2">Trình độ học vấn</label>
+                                <div class="relative">
+                                    <select id="education" class="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-transparent py-2 px-3 md:py-3 md:px-3 outline-none transition-all appearance-none cursor-pointer">
+                                        <option value="" disabled="" selected="">Chọn trình độ...</option>
+                                        <option value="highschool">THPT</option>
+                                        <option value="college">Cao đẳng</option>
+                                        <option value="university">Đại học</option>
+                                        <option value="master">Trung cấp</option>
+                                        <option value="phd">Khác</option>
+                                    </select>
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-4 text-slate-400 pointer-events-none"></iconify-icon>
+                                </div>
                             </div>
                         </div>
 
@@ -721,6 +750,7 @@
                 birthYear: this.querySelector('input[placeholder="2000"]').value,
                 address: this.querySelector('input[placeholder="Đô Lương, Nghệ An..."]').value,
                 position: this.querySelector('select').value,
+                education: document.getElementById('education').value,
                 experience: this.querySelector('textarea').value
             };
             
@@ -742,7 +772,7 @@
             submitBtn.classList.add('opacity-70');
             
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwMKbHx_4DRblZDpmXl4T_R_EU5fj3Bd7IN2AVuESxxS1aw8vdBkuhsp5r6F2nMEXKV/exec';
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybxtHTf1C4pkqvw0V1CLnH4Hobpf12nixT9I6OY5fTzI-XxrsZjqjzlyPjKjdtYELN/exec';
                 
                 console.log('Sending data:', formData);
                 
@@ -766,7 +796,13 @@
                 submitBtn.classList.add('bg-green-600');
                 
                 // Reset form
-                this.reset();
+                this.querySelector('input[placeholder="Nguyễn Văn A"]').value = '';
+                this.querySelector('input[placeholder="09xxxxxxxx"]').value = '';
+                this.querySelector('input[placeholder="2000"]').value = '';
+                this.querySelector('input[placeholder="Đô Lương, Nghệ An..."]').value = '';
+                this.querySelector('select').value = '';
+                document.getElementById('education').value = '';
+                this.querySelector('textarea').value = '';
                 
                 // Show success alert
                 setTimeout(() => {
